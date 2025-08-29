@@ -28,8 +28,14 @@ groups = {
 data = worksheet.get_all_records()
 df = pd.DataFrame(data) if data else pd.DataFrame(columns=["Name", "Group", "Timestamp"])
 
-# 名前入力
-name = st.text_input("名前を入力してください。入力すると、あなたのリンクが表示されるので、そちらをクリックして始めてください。:")
+st.markdown(
+    "名前を入力してください。  \n"
+    "入力すると、あなたのリンクが表示されます。  \n"
+    "そちらをクリックして始めてください。"
+)
+
+name = st.text_input("名前:", "")
+
 
 if st.button("スタート"):
     if name in df["Name"].values:
