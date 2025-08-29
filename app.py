@@ -29,7 +29,7 @@ data = worksheet.get_all_records()
 df = pd.DataFrame(data) if data else pd.DataFrame(columns=["Name", "Group", "Timestamp"])
 
 # 名前入力
-name = st.text_input("名前を入力してください:")
+name = st.text_input("名前を入力してください。入力すると、あなたのリンクが表示されるので、そちらをクリックして始めてください。:")
 
 if st.button("スタート"):
     if name in df["Name"].values:
