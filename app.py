@@ -30,8 +30,8 @@ df = pd.DataFrame(data) if data else pd.DataFrame(columns=["Name", "Group", "Tim
 
 st.markdown(
     "名前を入力してください。  \n"
-    "入力すると、あなたのリンクが表示されます。  \n"
-    "そちらをクリックして始めてください。"
+    "入力すると、あなたのリンクが作成されます。  \n"
+    "「ここをクリックして開始する」を押して始めてください。"
 )
 
 name = st.text_input("名前:", "")
